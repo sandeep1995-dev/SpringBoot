@@ -1,0 +1,23 @@
+server:
+  port: 2020
+  
+spring:
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+      
+      #connection properties
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: manager
+   #jpa proprties
+  jpa:
+    show-sql: true
+    hibernate:
+      format-sql: true
+      ddl-auto: update
+    properties:
+      dialect: org.hibernate.dialect.Oracle10gDialect
